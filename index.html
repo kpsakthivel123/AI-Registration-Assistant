@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Assistant | AI-SS-001</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">RA</span><div><b>Registration Assistant</b><small>AI & Data Science</small></div></div>
+    <span class="task-badge">AI-SS-001</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">AI-POWERED STUDENT SUPPORT</p>
+        <h1>Register for the right course with confidence.</h1>
+        <p class="hero-text">Check eligibility, explore courses and get instant registration guidance from your virtual assistant.</p>
+        <a class="primary-btn" href="#eligibility">Check Eligibility</a>
+      </div>
+      <div class="hero-card">
+        <div class="bot-avatar">🤖</div>
+        <b>AI Assistant</b>
+        <p>“Hi! Ask me about courses, eligibility or registration.”</p>
+        <span class="online">● Online</span>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>6</strong><span>Courses</span></div>
+      <div><strong>3</strong><span>Eligibility Levels</span></div>
+      <div><strong>24/7</strong><span>Assistant</span></div>
+    </section>
+
+    <section id="eligibility" class="panel">
+      <div class="section-title">
+        <div><span class="icon">✓</span><div><h2>Eligibility Checker</h2><p>Enter your academic details to find suitable courses.</p></div></div>
+      </div>
+      <form id="eligibilityForm" class="form-grid">
+        <label>Student Name<input id="studentName" required placeholder="Enter your name"></label>
+        <label>Highest Qualification
+          <select id="qualification" required>
+            <option value="">Select</option><option>B.Sc</option><option>BCA</option><option>B.E / B.Tech</option><option>B.Com</option><option>M.Sc</option><option>12th</option>
+          </select>
+        </label>
+        <label>Percentage<input id="percentage" type="number" min="0" max="100" required placeholder="e.g. 72"></label>
+        <label>Preferred Course
+          <select id="course">
+            <option value="all">Show all suitable courses</option>
+            <option value="data-science">Data Science</option>
+            <option value="python">Python & AI</option>
+            <option value="web">Web Development</option>
+            <option value="cyber">Cyber Security</option>
+            <option value="cloud">Cloud Computing</option>
+            <option value="analytics">Data Analytics</option>
+          </select>
+        </label>
+        <button class="primary-btn" type="submit">Check My Eligibility</button>
+      </form>
+      <div id="eligibilityResult" class="result hidden"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-title"><div><h2>Course Explorer</h2><p>Compare courses before registration.</p></div></div>
+      <div id="courseGrid" class="course-grid"></div>
+    </section>
+
+    <section class="panel assistant-panel">
+      <div class="section-title"><div><span class="icon">🤖</span><div><h2>AI Registration Assistant</h2><p>Ask questions in simple English.</p></div></div></div>
+      <div id="chat" class="chat">
+        <div class="message bot">Hello! I’m your Registration Assistant. Try asking: <b>“Which course is best for B.Sc?”</b></div>
+      </div>
+      <div class="quick"><button onclick="ask('How do I register?')">How do I register?</button><button onclick="ask('Which course is best for B.Sc?')">Best course for B.Sc?</button><button onclick="ask('What percentage is required?')">Percentage required?</button></div>
+      <form id="chatForm" class="chat-form"><input id="chatInput" placeholder="Ask about courses, eligibility or registration..." autocomplete="off"><button>Send</button></form>
+    </section>
+
+    <section class="panel steps">
+      <div class="section-title"><div><h2>Registration Guide</h2><p>Follow these simple steps.</p></div></div>
+      <div class="step-grid">
+        <div><b>01</b><h3>Create Profile</h3><p>Enter your basic and academic details.</p></div>
+        <div><b>02</b><h3>Check Eligibility</h3><p>Use the AI eligibility checker.</p></div>
+        <div><b>03</b><h3>Select Course</h3><p>Compare courses and choose one.</p></div>
+        <div><b>04</b><h3>Submit Request</h3><p>Confirm your course registration.</p></div>
+      </div>
+    </section>
+
+    <section id="registration" class="panel">
+      <div class="section-title"><div><h2>Course Registration</h2><p>Submit a demo registration request.</p></div></div>
+      <form id="registrationForm" class="form-grid">
+        <label>Student Name<input id="regName" required></label>
+        <label>Email<input id="regEmail" type="email" required placeholder="student@example.com"></label>
+        <label>Course
+          <select id="regCourse" required>
+            <option value="">Select course</option>
+            <option>Data Science</option><option>Python & AI</option><option>Web Development</option><option>Cyber Security</option><option>Cloud Computing</option><option>Data Analytics</option>
+          </select>
+        </label>
+        <label>Learning Mode<select><option>Online</option><option>Offline</option><option>Hybrid</option></select></label>
+        <button class="primary-btn" type="submit">Submit Registration</button>
+      </form>
+      <div id="registrationResult" class="result hidden"></div>
+    </section>
+  </main>
+
+  <footer>Registration Assistant • Task AI-SS-001 • Demo Project</footer>
+  <script src="script.js"></script>
+</body>
+</html>
