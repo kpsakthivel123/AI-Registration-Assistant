@@ -33,6 +33,9 @@
 4. Open the **AI Registration Assistant** and ask questions.
 5. Select a course.
 6. Submit the demo registration request.
+7. ## YouTube Demo
+
+[Watch the Project Demo](https://youtu.be/AeLNB0Ham6I?si=4O_4_8fDhlbn8HxG)
 
 ## Note
 This is a front-end internship demonstration. The AI assistant uses a lightweight local intent/keyword matching engine so it works offline. A production version could connect the same interface to a Python/Flask backend, database and an approved AI API.
